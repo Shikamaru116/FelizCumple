@@ -13,7 +13,10 @@ export class FinalComponent {
     Swal.fire({
       title: 'Pue bueno, esto fue toda la pagina',
       text: 'Espero que hayas disfrutado de la pagina que lo hice con mucho cariño para ti 💜',
-      icon: 'info',
+      imageUrl: 'assets/fotos/cocoadio.jpeg',
+      imageWidth: 400,
+      imageHeight: 400,
+      imageAlt: 'Custom image',
       confirmButtonText: 'Ta´ bien ',
     });
   }
