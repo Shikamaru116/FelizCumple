@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
 
+
+
 @Component({
   selector: 'app-contexto',
   templateUrl: './contexto.component.html',
@@ -34,11 +36,19 @@ export class ContextoComponent {
 
   showSweetAlert() {
     Swal.fire({
-      title: 'Texto desbloqueado',
+      title: 'Ahora si jaja ya se desbloqueo xd',
       text: 'Este es el texto secreto.',
       icon: 'info',
       confirmButtonText: 'Entendido',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
     });
+
+
   }
   
   vegeta(){

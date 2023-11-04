@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { SliderComponent } from './slider/slider.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ContextoComponent } from './contexto/contexto.component';
+import { FinalComponent } from './final/final.component';
+import { ImageFallComponent } from './image-fall/image-fall.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SliderComponent,
     CalculatorComponent,
-    ContextoComponent
+    ContextoComponent,
+    FinalComponent,
+    ImageFallComponent
   ],
   imports: [
     FormsModule,

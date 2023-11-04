@@ -1,0 +1,9 @@
+<div class="image-fall-container">
+    <img
+      *ngFor="let image of images; let i = index"
+      class="image"
+      [src]="image"
+      [style.animation-delay]="'0.5s'"
+      alt="Falling Image"
+    />
+  </div>
