@@ -25,8 +25,8 @@ export class ContextoComponent {
     } else {
       Swal.fire({
         icon: 'error',
-        title: 'Código incorrecto',
-        text: 'Inténtalo de nuevo.',
+        title: 'Que no mujer',
+        text: 'No le pongas jajaja ya le cambie de codigo por si las dudas.',
       });
       this.enteredCode = ''; // Limpia el campo de entrada.
     }
