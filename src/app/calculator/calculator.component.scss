@@ -1,0 +1,39 @@
+.calculator {
+    text-align: center;
+    margin: 20px;
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  
+    input {
+      padding: 5px;
+      margin: 5px;
+    }
+  
+    button {
+      padding: 10px;
+      background-color: #E5CFF7;
+      color: rgb(0, 0, 0);
+      border: none;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #E5CFF7;
+      }
+    }
+  
+    .result {
+      margin-top: 20px;
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  .a{
+    font-size: 40px;
+    margin-left: 90%;
+    cursor: pointer;
+  }

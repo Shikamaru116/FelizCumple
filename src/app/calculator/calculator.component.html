@@ -1,0 +1,10 @@
+<span class="a" (click)="messi()">🐐</span>
+<div class="calculator ">
+    <h2>Birthday</h2>
+    <input type="number" [(ngModel)]="num1" placeholder="tu" />
+    <input type="number" [(ngModel)]="num2" placeholder="yo" />
+    <button (click)="multiply()">Multiplicar</button>
+    <div *ngIf="result !== null" class="result">
+        <p>Resultado: {{ result }}</p>
+    </div>
+</div>
