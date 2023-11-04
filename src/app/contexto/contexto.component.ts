@@ -11,7 +11,7 @@ export class ContextoComponent {
   showSecret = false;
   showInput = false;
   enteredCode: string = '';
-  secretCode = '1136'; // Este es el código que desbloqueará el texto.
+  secretCode = '2116'; // Este es el código que desbloqueará el texto.
 
   showSecretInput() {
     this.showInput = true;
