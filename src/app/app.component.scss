@@ -1,9 +1,9 @@
 .xd {
   text-align: center;
   font-size: 30px;
-  font-family: 'Overpass', sans-serif;
+  font-family: "Overpass", sans-serif;
   padding-top: 15px;
-  transition: font-size 0.3s, height 0.3s; /* Agregar transiciones */
+  transition: font-size 0.3s, height 0.3s;
 }
 
 .cabeza {
@@ -18,17 +18,18 @@
 
 @keyframes adjust-cabeza {
   to {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
-    font-size: 15px; /* Cambiar el tamaño de fuente después de cierto scroll */
-    height: 35px; /* Cambiar la altura después de cierto scroll */
+    font-size: 15px;
+    height: 35px;
     z-index: 1;
     padding-bottom: 30px;
   }
 }
 
 .a {
-  font-family: 'Microsoft YaHei', Meiryo, 'Meiryo UI', Arial Unicode MS, sans-serif;
+  font-family: "Microsoft YaHei", Meiryo, "Meiryo UI", Arial Unicode MS,
+    sans-serif;
 }
 
 .A {
@@ -44,7 +45,6 @@
 }
 
 .tooltip {
-
   visibility: hidden;
   background-color: #333;
   color: #fff;
@@ -70,4 +70,63 @@
 .tooltip-trigger:hover + .tooltip {
   visibility: visible;
   opacity: 1;
+}
+
+// Para la flor
+
+.flor-amarilla {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  // background: rgba(255, 255, 0, 0.8);
+  display: none; /* Oculto por defecto */
+  z-index: 999; /* Se pone encima de todo */
+  justify-content: center;
+  align-items: center;
+}
+
+.flor-amarilla.active {
+  display: flex; /* Mostrar cuando se active */
+}
+
+/* Estilo para el botón de cerrar */
+.btn-cerrar-flor {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: #7560a9;
+  color: white;
+  border: none;
+  border-radius: 45%;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.btn-cerrar-flor:hover {
+  background-color: darkred;
+}
+.contBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 80px;
+}
+
+.btnFlor {
+  border: none;
+  font-size: 45px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+// para cel xd
+
+@media (max-width: 480px) {
+  .contBtn {
+    margin-right: 0px;
+    justify-content: center;
+  }
 }

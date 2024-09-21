@@ -1,0 +1,650 @@
+* ::after,
+::before {
+  box-sizing: content-box;
+}
+
+.body {
+  background-color: rgb(13, 3, 33);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.glass {
+  height: 75vh;
+  width: 30vw;
+
+  background: #122139;
+  border-radius: 300px 300px 0px 0px;
+}
+
+.glass:before {
+  content: "";
+  height: 40px;
+  width: 40px;
+  transform-origin: center;
+  border: 25px solid #122139;
+  border-radius: 100%;
+  position: absolute;
+  left: 256px;
+  top: -74px;
+}
+
+.glass:after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 44%;
+  background: #a52a2a;
+  top: 100%;
+  // left: 1%;
+}
+
+.shine {
+  width: 2vw;
+  height: 30vh;
+  background: rgba(255, 255, 255, 0.286);
+  opacity: 0.2;
+  position: relative;
+  left: 85%;
+  top: 200px;
+  border-radius: 100px;
+  z-index: 10;
+}
+
+.shine:before {
+  content: "";
+  width: 26px;
+  height: 40px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.234);
+  top: 365px;
+  border-radius: 100px;
+}
+
+.petals > div {
+  position: absolute;
+  background: #f0a500;
+  width: 4vw;
+  height: 15vh;
+
+  top: 200px;
+  transition: all 0.5s ease-out;
+}
+
+.petals > div:nth-child(1) {
+  border-radius: 15px;
+  box-shadow: 0px 0px 60px rgba(245, 148, 184, 0.2);
+  left: 268px;
+  top: 200px;
+  background: #f0a500;
+}
+
+.petals > div:nth-child(2),
+.petals > div:nth-child(4),
+.petals > div:nth-child(6) {
+  background: #f0a500;
+  left: 230px;
+  border-radius: 0px 50px 0px 50px;
+  transform-origin: bottom right;
+}
+
+.petals > div:nth-child(3),
+.petals > div:nth-child(5),
+.petals > div:nth-child(7) {
+  background: #f0a500;
+  left: 300px;
+  border-radius: 50px 0px 50px 0px;
+  transform-origin: bottom left;
+}
+
+.petals > div:nth-child(2) {
+  z-index: 5;
+  background: #f0a500;
+  top: 218px;
+  height: 130px;
+  box-shadow: 0px 0px 60px rgba(245, 148, 184, 0.3);
+  animation: bloom2 3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.petals > div:nth-child(3) {
+  z-index: 4;
+  background: #f0a500;
+  top: 218px;
+  height: 130px;
+  box-shadow: 0px 0px 60px rgba(245, 148, 184, 0.3);
+  animation: bloom3 3s ease-in-out, glowing 2.5s ease-in-out infinite;
+  animation-fill-mode: forwards;
+}
+
+.petals > div:nth-child(4) {
+  z-index: 3;
+  background: #f0a500;
+  top: 213px;
+  height: 135px;
+  box-shadow: 0px 0px 60px rgba(245, 148, 184, 0.3);
+  animation: bloom4 3s ease-in-out, glowing 2.5s ease-in-out infinite;
+  animation-fill-mode: forwards;
+}
+
+.petals > div:nth-child(5) {
+  z-index: 2;
+  background: #f0a500;
+  top: 213px;
+  height: 135px;
+  box-shadow: 0px 0px 60px rgba(245, 148, 184, 0.3);
+  animation: bloom5 3s ease-in-out, glowing 2.5s ease-in-out infinite;
+  animation-fill-mode: forwards;
+}
+
+.petals > div:nth-child(6) {
+  z-index: 1;
+  background: #f0a500;
+  top: 200px;
+  height: 130px;
+  box-shadow: 0px 0px 60px rgba(245, 148, 184, 0.3);
+  animation: bloom6 3s ease-in-out, glowing 2.5s ease-in-out infinite;
+  animation-fill-mode: forwards;
+}
+
+.petals > div:nth-child(7) {
+  z-index: 0;
+  background: #f0a500;
+  top: 200px;
+  height: 130px;
+  box-shadow: 0px 0px 60px rgba(245, 148, 184, 0.3);
+  animation: bloom7 3s ease-in-out, glowing 2.5s ease-in-out infinite;
+  animation-fill-mode: forwards;
+}
+
+.deadPetals > div {
+  position: absolute;
+  background: #d52d58;
+  width: 20px;
+  height: 15px;
+  top: 200px;
+  border-radius: 0px 30px 0px 30px;
+  box-shadow: 0px 0px 30px rgba(245, 148, 184, 0.5);
+  transition: all 0.5s ease-out;
+}
+
+.deadPetals > div:nth-child(1) {
+  left: 50px;
+  transform: rotate(-30deg);
+  animation: falling 20s 4s ease-in-out infinite;
+}
+
+.deadPetals > div:nth-child(2) {
+  left: 100px;
+  transform: rotate(-30deg);
+  animation: falling 20s 8s ease-in-out infinite;
+}
+
+.deadPetals > div:nth-child(3) {
+  left: 150px;
+  transform: rotate(-30deg);
+  animation: falling 20s 12s ease-in-out infinite;
+}
+
+.deadPetals > div:nth-child(4) {
+  left: 200px;
+  transform: rotate(-30deg);
+  animation: falling 20s 16s ease-in-out infinite;
+}
+
+.leaves > div:nth-last-child(1) {
+  position: absolute;
+  width: 55px;
+  height: 30px;
+  background: #338f37;
+  top: 334px;
+  left: 278px;
+  border-radius: 100px;
+}
+
+.leaves > div:nth-child(1) {
+  position: absolute;
+  width: 15px;
+  height: 390px;
+  background: #054c05;
+  top: 308px;
+  left: 300px;
+  border-radius: 0 0 100px 100px;
+}
+
+.leaves > div:nth-child(2) {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  top: 53px;
+  border-radius: 10px 80px 40px 80px;
+  background: #054c05;
+  transform-origin: bottom;
+  transform: rotate(-30deg);
+  top: 412px;
+  left: 254px;
+  box-shadow: inset 10px 10px #066406;
+}
+
+.leaves > div:nth-child(3) {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  top: 53px;
+  border-radius: 80px 1px 80px 40px;
+  background: #054c05;
+  transform-origin: bottom;
+  transform: rotate(30deg);
+  top: 370px;
+  left: 300px;
+  box-shadow: inset -10px 10px #066406;
+}
+
+.thorns > div {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 200px;
+}
+
+.thorns > div:nth-child(odd) {
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #054c05;
+  left: 315px;
+}
+
+.thorns > div:nth-child(even) {
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #054c05;
+  left: 285px;
+}
+
+.thorns > div:nth-child(1) {
+  top: 465px;
+}
+
+.thorns > div:nth-child(2) {
+  top: 390px;
+}
+
+.thorns > div:nth-child(4) {
+  top: 525px;
+}
+
+@keyframes bloom2 {
+  50% {
+    transform: rotate(-100deg);
+    top: 270px;
+    left: 150px;
+  }
+
+  100% {
+    transform: rotate(-60deg);
+    top: 545px;
+    left: 150px;
+    background: #9c7528;
+    opacity: 0.5;
+    box-shadow: 0px 0px 0px rgba(245, 148, 184, 0);
+  }
+}
+@keyframes bloom3 {
+  100% {
+    transform: rotate(50deg);
+    background: #f0a500; /* Asegúrate de que el color final sea tenue */
+    box-shadow: 0px 0px 30px rgba(91, 69, 7, 0.8);
+  }
+}
+
+@keyframes bloom4 {
+  100% {
+    background: #f0a500; /* Asegúrate de que el color final sea tenue */
+    box-shadow: 0px 0px 30px rgba(91, 69, 7, 0.8);
+
+    transform: rotate(-25deg);
+  }
+}
+
+@keyframes bloom5 {
+  100% {
+    background: #f0a500; /* Asegúrate de que el color final sea tenue */
+    box-shadow: 0px 0px 30px rgba(91, 69, 7, 0.8);
+
+    transform: rotate(25deg);
+  }
+}
+
+@keyframes bloom6 {
+  100% {
+    background: #f0a500; /* Asegúrate de que el color final sea tenue */
+    box-shadow: 0px 0px 30px rgba(91, 69, 7, 0.8);
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes bloom7 {
+  100% {
+    background: #f0a500; /* Asegúrate de que el color final sea tenue */
+    box-shadow: 0px 0px 30px rgba(91, 69, 7, 0.8);
+
+    background: #f0a500;
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes glowing {
+  50% {
+    background: #f0a500;
+    box-shadow: 0px 0px 60px rgb(134, 101, 23);
+  }
+}
+
+// @keyframes falling {
+//   20% {
+//     top: 335px;
+//     background: #71199d;
+//   }
+
+//   100% {
+//     top: 450px;
+//     opacity: 0;
+//   }
+// }
+
+.texto {
+  top: 50%;
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  left: 10%;
+}
+
+@keyframes bloom2-medio {
+  50% {
+    transform: rotate(-100deg);
+    top: 270px;
+    left: 150px;
+  }
+
+  100% {
+    transform: rotate(-60deg);
+    top: 552px;
+    left: 210px;
+    width: 6vh;
+    background: #9c7528;
+    opacity: 0.5;
+    box-shadow: 0px 0px 0px rgba(245, 148, 184, 0);
+  }
+}
+
+/* Pantallas medianas (de 1496px a 1880px) */
+@media (min-width: 1496px) and (max-width: 1880px) {
+  .container {
+    left: 70%;
+    top: 45%;
+  }
+  .glass {
+    height: 80vh;
+  }
+  .glass:after {
+    width: 35%;
+  }
+
+  .shine {
+    width: 1vw;
+    height: 20vh;
+    left: 90%;
+
+    &::before {
+      width: 16px;
+      height: 34px;
+      top: 250px;
+    }
+  }
+
+  .petals-container {
+    position: absolute; /* O relativo según lo que necesites */
+    top: -18%;
+    left: -4%;
+    transition: all 0.5s ease-out; /* Para suavidad al mover */
+  }
+  .thorns-container {
+    position: absolute; /* O relativo según lo que necesites */
+    top: -14%;
+    left: -4%;
+    transition: all 0.5s ease-out; /* Para suavidad al mover */
+  }
+  .leaves-container {
+    position: absolute; /* O relativo según lo que necesites */
+    top: -17%;
+    left: -4%;
+    transition: all 0.5s ease-out; /* Para suavidad al mover */
+  }
+  .petals > div {
+    width: 5vw;
+  }
+  .petals > div:nth-child(1) {
+    width: 4vw;
+    height: 20vh;
+  }
+
+  .petals > div:nth-child(2) {
+    animation: bloom2-medio 3s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes bloom2-chico {
+  50% {
+    transform: rotate(50deg);
+    top: 270px;
+    left: 150px;
+  }
+
+  100% {
+    transform: rotate(331deg);
+    left: 213px;
+    top: 500px;
+    background: #9c7528;
+    opacity: 0.5;
+    box-shadow: 0px 0px 0px rgba(245, 148, 184, 0);
+    height: 85px;
+  }
+}
+
+@keyframes bloom3-chico {
+  100% {
+    transform: rotate(60deg);
+    background: #f0a500;
+    box-shadow: 0px 0px 30px rgba(91, 69, 7, 0.8);
+  }
+}
+
+@keyframes bloom4-chico {
+  100% {
+    background: #f0a500;
+    box-shadow: 0px 0px 30px rgba(91, 69, 7, 0.8);
+    transform: rotate(319deg);
+  }
+}
+
+@keyframes bloom5-chico {
+  100% {
+    background: #f0a500;
+    box-shadow: 0px 0px 30px rgba(91, 69, 7, 0.8);
+    transform: rotate(31deg);
+  }
+}
+
+@keyframes bloom6-chico {
+  100% {
+    background: #f0a500;
+    box-shadow: 0px 0px 30px rgba(91, 69, 7, 0.8);
+    transform: rotate(346deg);
+  }
+}
+
+@keyframes bloom7-chico {
+  100% {
+    background: #f0a500;
+    box-shadow: 0px 0px 30px rgba(91, 69, 7, 0.8);
+    background: #f0a500;
+    transform: rotate(10deg);
+  }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .body {
+    background-color: aqua;
+  }
+  .glass {
+    width: 90vw; /* Ocupa más ancho */
+    height: 65vh;
+
+    &::before {
+      left: 48%;
+      top: -65px;
+    }
+
+    &::after {
+      width: 90%;
+    }
+  }
+
+  .shine {
+    width: 3vw;
+    height: 20vh;
+    left: 93%;
+
+    &::before {
+      width: 18px;
+      height: 29px;
+      top: 115%;
+    }
+  }
+
+  .petals-container {
+    position: absolute; /* O relativo según lo que necesites */
+    top: -20%;
+    left: -35%;
+    transition: all 0.5s ease-out; /* Para suavidad al mover */
+  }
+
+  .thorns-container {
+    position: absolute; /* O relativo según lo que necesites */
+    top: -20%;
+    left: -39%;
+    transition: all 0.5s ease-out; /* Para suavidad al mover */
+  }
+
+  .leaves-container {
+    position: absolute; /* O relativo según lo que necesites */
+    top: -25%;
+    left: -39%;
+    transition: all 0.5s ease-out; /* Para suavidad al mover */
+  }
+
+  .petals > div {
+    width: 17vw;
+    height: 15vh;
+  }
+
+  .petals > div:nth-child(2) {
+    height: 85px;
+    animation: bloom2-chico 5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .petals > div:nth-child(3) {
+    height: 16vh;
+  }
+  .petals > div:nth-child(4) {
+    height: 16vh;
+  }
+  .petals > div:nth-child(5) {
+    height: 16vh;
+  }
+  .petals > div:nth-child(6) {
+    height: 16vh;
+  }
+  .petals > div:nth-child(7) {
+    height: 16vh;
+  }
+
+  .leaves > div:nth-child(1) {
+    height: 314px;
+  }
+
+  .texto {
+    font-size: 25px; /* Ajustar tamaño de fuente */
+    left: 5%; /* Alinear mejor */
+  }
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Mostrar el modal cuando isModalOpen es true */
+.show {
+  display: block;
+}
+
+.love-button {
+  font-size: 24px;
+  /* padding: 10px 20px; */
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  margin: 15px;
+}
+
+.love-button:hover {
+  background-color: #ff1493;
+}

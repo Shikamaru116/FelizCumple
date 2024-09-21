@@ -13,11 +13,11 @@ export class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.showNotification();
-    }, 2000);
+    // setTimeout(() => {
+    //   this.showNotification();
+    // }, 2000);
 
-    
+
   }
 
   showNotification() {
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
         left top
         no-repeat
       `,
-      confirmButtonText: 'Ta´ bien', 
+      confirmButtonText: 'Ta´ bien',
     }).then((result) => {
       if (result.isConfirmed) {
         this.playAudio();
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
           timer: 3500
         })
       }
-      else{
+      else {
         this.playAudio();
         Swal.fire({
           icon: 'success',
@@ -69,6 +69,21 @@ export class AppComponent implements OnInit {
       console.log('La reproducción ha finalizado.');
     });
   }
+
+  mostrarFlor() {
+    const florAmarilla = document.getElementById('flor-amarilla');
+    if (florAmarilla) {
+      florAmarilla.classList.add('active');
+    }
+  }
+
+  ocultarFlor() {
+    const florAmarilla = document.getElementById('flor-amarilla');
+    if (florAmarilla) {
+      florAmarilla.classList.remove('active');
+    }
+  }
+
 
 
 }

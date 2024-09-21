@@ -18,7 +18,7 @@ export class CalculatorComponent implements OnInit {
   multiply() {
     this.result = this.num1 * this.num2;
     if (this.result === 462) {
-      // Cambia 441 a cualquier resultado que desees para mostrar el video
+      
       this.playVideo();
     }
   }
@@ -26,7 +26,7 @@ export class CalculatorComponent implements OnInit {
   playVideo() {
     Swal.fire({
       html: '<video src="assets/Videos/messi.mp4" controls></video>',
-      showConfirmButton: false // Para ocultar el botón "Aceptar"
+      showConfirmButton: false 
     });
   }
 

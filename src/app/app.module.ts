@@ -10,6 +10,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { ContextoComponent } from './contexto/contexto.component';
 import { FinalComponent } from './final/final.component';
 import { ImageFallComponent } from './image-fall/image-fall.component';
+import { FlorAmarillaComponent } from './components/flor-amarilla/flor-amarilla.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ImageFallComponent } from './image-fall/image-fall.component';
     CalculatorComponent,
     ContextoComponent,
     FinalComponent,
-    ImageFallComponent
+    ImageFallComponent,
+    FlorAmarillaComponent
   ],
   imports: [
     FormsModule,

@@ -1,5 +1,7 @@
 <nav class="card card-header xd cabeza"> Feliz Cumpleaños 🥳 </nav>
 <br>
+<br>
+<!--  -->
 <section class="container text-center a">
   <p class="A">Hola señorita Pacheco te hago este pequeño regalo por tu cumpleaños</p>
   <p>Haciendo algo diferente que probablemente las demás personas te hayan regalado</p>
@@ -7,14 +9,37 @@
 <br>
 <hr>
 <section>
-  <h3 style="font-weight: bold;" class="text-center a">Jajaja fotos de feliz cumpleaños XD</h3>
-  <div class="container">
-    <div class="tooltip-container">
-      <span class="tooltip-trigger">🎂</span>
-      <div class="tooltip">Hola, aqui le pedi a una ia que me ayuadara haceindo imagenes xd
+
+  <!-- Flor amarilla -->
+  <section>
+
+    <section id="flor-amarilla" class="flor-amarilla">
+      <app-flor-amarilla></app-flor-amarilla>
+      <!-- Botón para ocultar la flor -->
+      <button (click)="ocultarFlor()" class="btn-cerrar-flor">🥀</button>
+    </section>
+
+    <!-- Botón para mostrar la flor -->
+    <div class="contBtn">
+      <button class="btnFlor" (click)="mostrarFlor()">🌻</button>
+    </div>
+
+    <hr>
+  </section>
+
+  <!--  -->
+  <section>
+
+    <h3 style="font-weight: bold;" class="text-center a">Jajaja fotos de feliz cumpleaños XD</h3>
+    <div class="container">
+      <div class="tooltip-container">
+        <span class="tooltip-trigger">🎂</span>
+        <div class="tooltip">Hola, aqui le pedi a una ia que me ayuadara haceindo imagenes xd
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
 
   <!-- Slider -->
 
