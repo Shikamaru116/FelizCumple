@@ -112,21 +112,14 @@
 .contBtn {
   display: flex;
   justify-content: flex-end;
-  margin-right: 80px;
+  margin-right: 0px;
+  justify-content: center;
 }
 
 .btnFlor {
   border: none;
-  font-size: 45px;
+  font-size: 60px;
   background-color: #fff;
   cursor: pointer;
 }
 
-// para cel xd
-
-@media (max-width: 480px) {
-  .contBtn {
-    margin-right: 0px;
-    justify-content: center;
-  }
-}

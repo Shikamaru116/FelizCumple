@@ -1,29 +1,6 @@
 <section class="body">
 
-    <section>
-        <!-- Botón con emoji 💌 -->
-        <button (click)="openModal()" class="love-button">💌</button>
-
-        <!-- Modal para la carta -->
-        <div id="loveModal" class="modal" [class.show]="isModalOpen">
-            <div class="modal-content">
-                <span class="close" (click)="closeModal()">&times;</span>
-                <h2>Una carta para ti</h2>
-                <p>Holi, como hoy se supone que se dan flores igual que hace unos meses...
-                    Decidí darte una, pero lamentablemente no pude dártela en persona ni físicamente.
-                    Por eso, decidí darte una digital que durará prácticamente para siempre.
-                    <br>
-                    Espero que te guste, con mucho cariño, Dr. Shikamaru 🌻
-                    <br>
-                    <br>
-                    Pd. El pétalo que ves cayendo es mi pequeña forma de recordarte que, aunque las cosas no siempre son
-                    como planeamos, siempre encuentro una manera especial de demostrarte lo que significas para mí <3
-
-                </p>
-            </div>
-        </div>
-    </section>
-
+    <app-carta></app-carta>
 
     <div class="container">
         <div class="glass">

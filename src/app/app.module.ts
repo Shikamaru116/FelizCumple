@@ -11,6 +11,7 @@ import { ContextoComponent } from './contexto/contexto.component';
 import { FinalComponent } from './final/final.component';
 import { ImageFallComponent } from './image-fall/image-fall.component';
 import { FlorAmarillaComponent } from './components/flor-amarilla/flor-amarilla.component';
+import { CartaComponent } from './components/carta/carta.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FlorAmarillaComponent } from './components/flor-amarilla/flor-amarilla.
     ContextoComponent,
     FinalComponent,
     ImageFallComponent,
-    FlorAmarillaComponent
+    FlorAmarillaComponent,
+    CartaComponent
   ],
   imports: [
     FormsModule,
