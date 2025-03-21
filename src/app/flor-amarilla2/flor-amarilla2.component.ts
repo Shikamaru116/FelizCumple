@@ -23,6 +23,7 @@ export class FlorAmarilla2Component implements OnInit {
   @Output() close = new EventEmitter<void>();
 
   mensajeVisible = false;
+  showCielo = false;
 
   hearts: number[] = []
   petals: number[] = []
