@@ -10,22 +10,31 @@
 <hr>
 <section>
 
-  <!-- Flor amarilla -->
+  <!-- Otra flor amarilla xd -->
   <section>
+    <div style="text-align:center;">
+      <button class="btn-flor-magica" (click)="showCielo = true">🌸 </button>
+    </div>
+    <app-flor-amarilla2 *ngIf="showCielo" (close)="showCielo = false"></app-flor-amarilla2>
+    <!-- Esta es el nuevo componente -->
+  </section>
 
-    <section id="flor-amarilla" class="flor-amarilla">
+  <!-- Flor amarilla -->
+  <!-- <section> -->
+
+  <!-- <section id="flor-amarilla" class="flor-amarilla">
       <app-flor-amarilla></app-flor-amarilla>
       <!-- Botón para ocultar la flor -->
-      <button (click)="ocultarFlor()" class="btn-cerrar-flor">🥀</button>
-    </section>
+  <!-- <button (click)="ocultarFlor()" class="btn-cerrar-flor">🥀</button> --> -->
+  <!-- </section> -->
 
-    <!-- Botón para mostrar la flor -->
-    <div class="contBtn">
+  <!-- Botón para mostrar la flor -->
+  <!-- <div class="contBtn">
       <button class="btnFlor" (click)="mostrarFlor()">🌻</button>
-    </div>
+    </div> -->
 
-    <hr>
-  </section>
+  <!-- <hr> -->
+  <!-- </section> -->
 
   <!--  -->
   <!-- <section>
@@ -64,7 +73,7 @@
 
   <div style="text-align: center; font-size: 25px; opacity: 0.5;">
 
-    <h1>En mantenimiento XD</h1>
+    <h1>Aun en mantenimiento XD</h1>
   </div>
 </section>
 <router-outlet> </router-outlet>

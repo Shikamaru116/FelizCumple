@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  showCielo = false;
 
   title = 'felizCumple';
 

@@ -1,0 +1,37 @@
+<div class="cielo">
+    <!-- Botón cerrar -->
+    <button class="btn-cerrar" (click)="close.emit()">🌺</button>
+
+    <!-- Agrega esto en el cielo -->
+    <div class="bruma" *ngFor="let bruma of [1,2,3]"></div>
+
+    <!-- Agrega esto en el cielo -->
+    <div class="moon" (click)="cambiarFaseLuna()" [ngClass]="faseLuna"></div>
+
+    <!-- Estrellas -->
+    <div *ngFor="let star of stars" class="estrella" [ngStyle]="getRandomPosition()"></div>
+
+    <!-- Texto difuminado -->
+    <!-- <div class="texto-difuminado" @fadeIn>
+        <h1>Para usted Miss P 🌼</h1>
+    </div> -->
+
+    <!-- Corazones  -->
+    <div *ngFor="let heart of hearts" class="corazon" [ngStyle]="getRandomPosition()">❤️</div>
+
+    <!-- Estrellas fugaces -->
+    <div *ngFor="let star of shootingStars" class="estrella-fugaz" [ngStyle]="estrellasfugaces()">
+    </div>
+
+    <div *ngFor="let petal of petals" class="petalo-cayendo" [ngStyle]="getRandomPosition()">🌸</div>
+
+    <!-- Flores -->
+    <div *ngFor="let flower of flowers" class="flor-container" [ngStyle]="getRandomPosition()">
+        <div class="flor">
+            <div *ngFor="let petalo of [0,1,2,3,4,5]" class="petalo" [style.background]="getYellowColor()"></div>
+            <div class="centro" (click)="mostrarMensajeSecreto()"></div>
+            <div class="mensaje-secreto" *ngIf="mensajeVisible" @fadeIn>
+                Eres la mejor <3 </div>
+            </div>
+        </div>
+    </div>

@@ -12,6 +12,8 @@ import { FinalComponent } from './final/final.component';
 import { ImageFallComponent } from './image-fall/image-fall.component';
 import { FlorAmarillaComponent } from './components/flor-amarilla/flor-amarilla.component';
 import { CartaComponent } from './components/carta/carta.component';
+import { FlorAmarilla2Component } from './flor-amarilla2/flor-amarilla2.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { CartaComponent } from './components/carta/carta.component';
     FinalComponent,
     ImageFallComponent,
     FlorAmarillaComponent,
-    CartaComponent
+    CartaComponent,
+    FlorAmarilla2Component
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

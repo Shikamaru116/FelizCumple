@@ -123,3 +123,25 @@
   cursor: pointer;
 }
 
+.btn-flor-magica {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  animation: latido 1.5s infinite;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes latido {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
